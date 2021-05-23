@@ -9,8 +9,7 @@
     <string name="menu_favorite">Favorite</string>
 
     <string name="title_activity_detail_home">DetailHomeActivity</string>
-    <string name="no_data">Empty data</string>
-    <string name="info">Belum ada Favorite yang di tambahkan</string>
     <string name="something_wrong">Oops.. something went wrong</string>
     <string name="text_desc">sample text description</string>
+    <string name="no_data">Tidak ada data saat ini</string>
 </resources>

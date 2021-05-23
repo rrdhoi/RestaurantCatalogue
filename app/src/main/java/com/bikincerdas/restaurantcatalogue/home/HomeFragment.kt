@@ -68,6 +68,7 @@ class HomeFragment : Fragment() {
 
     override fun onDestroyView() {
         super.onDestroyView()
+        binding.rvRestaurant.removeAllViewsInLayout()
         _binding = null
     }
 }
