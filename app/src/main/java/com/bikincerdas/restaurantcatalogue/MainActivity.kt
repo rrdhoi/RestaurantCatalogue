@@ -1,6 +1,5 @@
 package com.bikincerdas.restaurantcatalogue
 
-import android.app.Activity
 import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity

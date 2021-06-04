@@ -22,11 +22,11 @@ import java.util.concurrent.TimeUnit
 val databaseModule = module {
     factory { get<RestaurantDatabase>().restaurantDao() }
     single {
-        val passphrase: ByteArray = SQLiteDatabase.getBytes("dicoding".toCharArray())
+        val passphrase: ByteArray = SQLiteDatabase.getBytes("script".toCharArray())
         val factory = SupportFactory(passphrase)
         Room.databaseBuilder(
             androidContext(),
-            RestaurantDatabase::class.java, "Restaurant.db"
+            RestaurantDatabase::class.java, "restaurant.db"
         ).fallbackToDestructiveMigration()
             .openHelperFactory(factory)
             .build()
@@ -37,7 +37,7 @@ val networkModule = module {
     single {
         val hostname = "restaurant-api.dicoding.dev"
         val certificatePinner = CertificatePinner.Builder()
-            .add(hostname, "sha256/CMznK6TSMddNnaTu0qeGz4dp5SNI7YO99qwBmew+PrM=")
+            .add(hostname, "sha256/bt+iy+lenQJsb4HOkogm57IiDC4t7rI+CrSix3nvrwI=")
             .add(hostname, "sha256/cXjPgKdVe6iojP8s0YQJ3rtmDFHTnYZxcYvmYGFiYME=")
             .add(hostname, "sha256/hxqRlPTu1bMS/0DITB1SSu0vd4u/8l8TjPgfaAp63Gc=")
             .build()

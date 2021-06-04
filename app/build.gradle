@@ -7,6 +7,7 @@ plugins {
 
 apply from: '../shared_dependencies.gradle'
 
+
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
@@ -24,10 +25,6 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled true
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
-        debug {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
@@ -51,6 +48,4 @@ dependencies {
     implementation project(":core")
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-
-    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.4'
 }
